@@ -12,7 +12,7 @@ A CP/M logical record is always 128 bytes; the physical sector can be larger and
 
 The CP/M 2.2 DPB is external to ordinary disk contents. Offsets within the 15-byte DPB: SPT at 0 (16-bit count of 128-byte records per track); BSH at 2; BLM at 3; EXM at 4; DSM at 5 (16-bit final allocation block number); DRM at 7 (16-bit final directory slot); AL0 and AL1 at 9 and 10; CKS at 11 (16-bit checksum-vector length); OFF at 13 (16-bit reserved-track count). Multi-byte fields are little-endian. Allocation block bytes = 128*2^BSH; BLM should equal 2^BSH-1. DSM+1 is block count and DRM+1 is directory slot count. AL0/AL1 reserve the earliest directory blocks, high bit first. CKS is a BIOS/BDOS change-detection parameter, not a persistent allocation checksum.
 
-The retained cpmtools decoder derives sector and track addressing from secLength, sectrk, boottrk and blksiz. Skew and user-area identity belong to the selected disk profile. A deleted 0xe5 record is not proof that its former allocation is recoverable.
+The retained cpmtools decoder derives sector and track addressing from secLength, sectrk, boottrk and blksiz. Skew and user-area identity belong to the selected disk profile.
 
 ## Layout and block-address formula
 
@@ -52,7 +52,7 @@ The independent provider uses Common V2: https://github.com/Infiltrator-Projects
 
 ## Primary sources and implementation boundary
 
-Digital Research, CP/M Operating System Manual, July 1982: https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Jul82.pdf . CP/M 2.2 and Plus format cross-checks: https://www.seasip.info/Cpm/format22.html and https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions: https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . The repository's native design and migration status define intended Common V2 implementation; this manual does not assert that a provider or release exists. Exact machine-specific sector profiles, Plus password/time encoding and write ordering require verification before claiming a complete independent writer.
+Digital Research, CP/M Operating System Manual, July 1982: https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Jul82.pdf . CP/M 2.2 and Plus format cross-checks: https://www.seasip.info/Cpm/format22.html and https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions: https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . For provider availability and qualification, use Implementation and qualification boundary and its referenced repository evidence. Exact machine-specific sector profiles, Plus password/time encoding and write ordering require verification before claiming a complete independent writer.
 
 The imported cpmtools baseline is lipro-cpm4l/cpmtools e534e20c15973a9559e981efb498a102020e5db7.
 

@@ -52,19 +52,18 @@ BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
 1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
 BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
 0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (3. Disk parameter block \(DPB\)) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (The CP/M 2.2 DPB is external to ordinary disk contents. Offsets within the 15-byte) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (DPB: SPT at 0 \(16-bit count of 128-byte records per track\); BSH at 2; BLM at 3; EXM) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (at 4; DSM at 5 \(16-bit final allocation block number\); DRM at 7 \(16-bit final) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (directory slot\); AL0 and AL1 at 9 and 10; CKS at 11 \(16-bit checksum-vector) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (length\); OFF at 13 \(16-bit reserved-track count\). Multi-byte fields are) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (little-endian. Allocation block bytes = 128*2^BSH; BLM should equal 2^BSH-1. DSM+1) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (is block count and DRM+1 is directory slot count. AL0/AL1 reserve the earliest) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (directory blocks, high bit first. CKS is a BIOS/BDOS change-detection parameter,) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (not a persistent allocation checksum.) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 570 Td (The retained cpmtools decoder derives sector and track addressing from secLength,) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 556 Td (sectrk, boottrk and blksiz. Skew and user-area identity belong to the selected disk) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (profile. A deleted 0xe5 record is not proof that its former allocation is) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 528 Td (recoverable.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (The CP/M 2.2 DPB is external to ordinary disk contents. Offsets within the) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (15-byte DPB: SPT at 0 \(16-bit count of 128-byte records per track\); BSH at 2;) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (BLM at 3; EXM at 4; DSM at 5 \(16-bit final allocation block number\); DRM at 7) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (\(16-bit final directory slot\); AL0 and AL1 at 9 and 10; CKS at 11 \(16-bit) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (checksum-vector length\); OFF at 13 \(16-bit reserved-track count\). Multi-byte) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (fields are little-endian. Allocation block bytes = 128*2^BSH; BLM should equal) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (2^BSH-1. DSM+1 is block count and DRM+1 is directory slot count. AL0/AL1) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (reserve the earliest directory blocks, high bit first. CKS is a BIOS/BDOS) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (change-detection parameter, not a persistent allocation checksum.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 570 Td (The retained cpmtools decoder derives sector and track addressing from) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 556 Td (secLength, sectrk, boottrk and blksiz. Skew and user-area identity belong to) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (the selected disk profile.) Tj ET
 0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 4) Tj ET
 
 %%Page
@@ -221,18 +220,19 @@ BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
 BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
 0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (13. Primary sources and implementation boundary) Tj ET
 0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Digital Research, CP/M Operating System Manual, July 1982:) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Jul82.pdf) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (. CP/M 2.2 and Plus format cross-checks: https://www.seasip.info/Cpm/format22.html) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (and https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions:) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . The repository's) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (native design and migration status define intended Common V2 implementation; this) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (manual does not assert that a provider or release exists. Exact machine-specific) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (sector profiles, Plus password/time encoding and write ordering require) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (verification before claiming a complete independent writer.) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 556 Td (The imported cpmtools baseline is lipro-cpm4l/cpmtools) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (e534e20c15973a9559e981efb498a102020e5db7.) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 518 Td (Retained source:) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 504 Td (https://github.com/Infiltrator-Projects/Filesystems/blob/101026021d9088d80b7f0f472d) Tj ET
-0.08 0.14 0.20 rg BT /F3 10 Tf 43 490 Td (9061f0e2c688a3/native/filesystems/cpm/userspace/cpmfs.c \(blob 5de3cff97a\).) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Jul82) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (.pdf . CP/M 2.2 and Plus format cross-checks:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (https://www.seasip.info/Cpm/format22.html and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . For provider) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (availability and qualification, use Implementation and qualification boundary) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (and its referenced repository evidence. Exact machine-specific sector profiles,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (Plus password/time encoding and write ordering require verification before) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 566 Td (claiming a complete independent writer.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (The imported cpmtools baseline is lipro-cpm4l/cpmtools) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 528 Td (e534e20c15973a9559e981efb498a102020e5db7.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 504 Td (Retained source:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 490 Td (https://github.com/Infiltrator-Projects/Filesystems/blob/101026021d9088d80b7f0f) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 476 Td (472d9061f0e2c688a3/native/filesystems/cpm/userspace/cpmfs.c \(blob 5de3cff97a\).) Tj ET
 0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 14) Tj ET
