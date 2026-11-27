@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R 44 0 R 46 0 R 48 0 R 50 0 R 52 0 R 54 0 R 56 0 R 58 0 R 60 0 R] /Count 28 >>
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R] /Count 14 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -18,821 +18,364 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
 endobj
 7 0 obj
-<< /Length 1108 >>
+<< /Length 1428 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Origins and format families) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Digital Research CP/M separates its machine-independent BDOS file operations) Tj
-T* (from BIOS-specific storage access. CP/M 1.x, 2.2 and CP/M Plus use related) Tj
-T* (but not identical disk and directory conventions. There is no universal) Tj
-T* (boot-sector signature, fixed floppy geometry or self-describing superblock. A) Tj
-T* (reader requires a trustworthy disk profile from a documented machine, image) Tj
-T* (container or externally selected disk definition. Treating a directory that) Tj
-T* (merely looks plausible as proof of format is unsafe. A writable mount needs) Tj
-T* (unambiguous geometry; the provider must not guess among compatible profiles.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 1 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 18 Tf 43 736 Td (Contents) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 711 Td (1. Origins and format families) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 695 Td (2. Three different units) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 679 Td (3. Disk parameter block \(DPB\)) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 663 Td (4. Layout and block-address formula) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 647 Td (5. Directory record and names) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 631 Td (6. Logical and physical extents) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 615 Td (7. Worked address and length example) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 599 Td (8. Reading, sparse records and metadata) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 583 Td (9. Allocation, directory capacity and writes) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 567 Td (10. CP/M Plus and variants) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 551 Td (11. Forensics, format and validation) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 535 Td (12. Implementation and qualification boundary) Tj ET
+0.08 0.14 0.20 rg BT /F1 11 Tf 43 519 Td (13. Primary sources and implementation boundary) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 1) Tj ET
 endstream
 endobj
 8 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
 endobj
 9 0 obj
-<< /Length 1115 >>
+<< /Length 1346 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Three different units) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(A CP/M logical record is always 128 bytes; the physical sector can be larger) Tj
-T* (and contains several logical records. An allocation block is an independently) Tj
-T* (chosen power-of-two multiple of 128 bytes. A track may contain multiple) Tj
-T* (physical sectors with interleave or skew. An image may store sectors in) Tj
-T* (logical, physical or container-defined order. Translate logical records into) Tj
-T* (the proper track and sector, apply the selected skew and head order, then map) Tj
-T* (to host bytes. Do not apply physical skew twice to images already in logical) Tj
-T* (order. Reserved tracks contain boot/system material outside the allocation) Tj
-T* (area.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 2 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (1. Origins and format families) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Digital Research CP/M separates its machine-independent BDOS file operations from) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (BIOS-specific storage access. CP/M 1.x, 2.2 and CP/M Plus use related but not) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (identical disk and directory conventions. There is no universal boot-sector) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (signature, fixed floppy geometry or self-describing superblock. A reader requires a) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (trustworthy disk profile from a documented machine, image container or externally) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (selected disk definition. Treating a directory that merely looks plausible as proof) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (of format is unsafe. A writable mount needs unambiguous geometry; the provider must) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (not guess among compatible profiles.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 2) Tj ET
 endstream
 endobj
 10 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
 endobj
 11 0 obj
-<< /Length 1194 >>
+<< /Length 1345 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Disk parameter block \(DPB\)) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(The CP/M 2.2 DPB is external to ordinary disk contents. Offsets within the) Tj
-T* (15-byte DPB: SPT at 0 \(16-bit count of 128-byte records per track\); BSH at 2;) Tj
-T* (BLM at 3; EXM at 4; DSM at 5 \(16-bit final allocation block number\); DRM at 7) Tj
-T* (\(16-bit final directory slot\); AL0 and AL1 at 9 and 10; CKS at 11 \(16-bit) Tj
-T* (checksum-vector length\); OFF at 13 \(16-bit reserved-track count\). Multi-byte) Tj
-T* (fields are little-endian. Allocation block bytes = 128*2^BSH; BLM should) Tj
-T* (equal 2^BSH-1. DSM+1 is block count and DRM+1 is directory slot count.) Tj
-T* (AL0/AL1 reserve the earliest directory blocks, high bit first. CKS is a) Tj
-T* (BIOS/BDOS change-detection parameter, not a persistent allocation checksum.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 3 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (2. Three different units) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (A CP/M logical record is always 128 bytes; the physical sector can be larger and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (contains several logical records. An allocation block is an independently chosen) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (power-of-two multiple of 128 bytes. A track may contain multiple physical sectors) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (with interleave or skew. An image may store sectors in logical, physical or) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (container-defined order. Translate logical records into the proper track and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (sector, apply the selected skew and head order, then map to host bytes. Do not) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (apply physical skew twice to images already in logical order. Reserved tracks) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (contain boot/system material outside the allocation area.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 3) Tj ET
 endstream
 endobj
 12 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
 endobj
 13 0 obj
-<< /Length 1140 >>
+<< /Length 1922 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Layout and block-address formula) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(For a simple linear image with no header or skew, allocation area starts at) Tj
-T* (OFF*SPT*128 bytes; block b begins at that offset plus b*block_bytes.) Tj
-T* (Directory begins at allocation block zero and occupies at least) Tj
-T* (ceil\(\(DRM+1\)*32/block_bytes\) blocks. The AL0/AL1 mask may reserve additional) Tj
-T* (directory blocks. Check that all required directory bytes fit, that) Tj
-T* (allocation block addresses do not exceed DSM and that the total mapped) Tj
-T* (sectors fit the source image. Real profiles may require container offsets,) Tj
-T* (explicit boot-sector counts, side ordering or track skew. Do not mistake the) Tj
-T* (allocation area for the first payload block.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 4 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (3. Disk parameter block \(DPB\)) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (The CP/M 2.2 DPB is external to ordinary disk contents. Offsets within the 15-byte) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (DPB: SPT at 0 \(16-bit count of 128-byte records per track\); BSH at 2; BLM at 3; EXM) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (at 4; DSM at 5 \(16-bit final allocation block number\); DRM at 7 \(16-bit final) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (directory slot\); AL0 and AL1 at 9 and 10; CKS at 11 \(16-bit checksum-vector) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (length\); OFF at 13 \(16-bit reserved-track count\). Multi-byte fields are) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (little-endian. Allocation block bytes = 128*2^BSH; BLM should equal 2^BSH-1. DSM+1) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (is block count and DRM+1 is directory slot count. AL0/AL1 reserve the earliest) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (directory blocks, high bit first. CKS is a BIOS/BDOS change-detection parameter,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (not a persistent allocation checksum.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 570 Td (The retained cpmtools decoder derives sector and track addressing from secLength,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 556 Td (sectrk, boottrk and blksiz. Skew and user-area identity belong to the selected disk) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (profile. A deleted 0xe5 record is not proof that its former allocation is) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 528 Td (recoverable.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 4) Tj ET
 endstream
 endobj
 14 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
 endobj
 15 0 obj
-<< /Length 1122 >>
+<< /Length 1370 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Directory record and names) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Every directory record is 32 bytes. Byte 0 is status or user number; bytes) Tj
-T* (1..8 hold padded filename; 9..11 hold extension; 12 is EX, 13 S1 or) Tj
-T* (byte-count field according to revision, 14 S2, 15 RC, 16..31 allocation) Tj
-T* (pointers. Mask attribute bits before comparing the native 7-bit name. CP/M) Tj
-T* (2.2 typically uses user areas 0..15 and 0xE5 for deleted/unused entries. The) Tj
-T* (extension's high bits encode read-only, system and, on later systems, archive) Tj
-T* (status. Names are space-padded 8.3 identities, normally uppercase. User area) Tj
-T* (is part of the file key, not a hierarchical directory or a distinct user) Tj
-T* (permission object.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 5 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (4. Layout and block-address formula) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (For a simple linear image with no header or skew, allocation area starts at) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (OFF*SPT*128 bytes; block b begins at that offset plus b*block_bytes. Directory) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (begins at allocation block zero and occupies at least ceil\(\(DRM+1\)*32/block_bytes\)) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (blocks. The AL0/AL1 mask may reserve additional directory blocks. Check that all) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (required directory bytes fit, that allocation block addresses do not exceed DSM and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (that the total mapped sectors fit the source image. Real profiles may require) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (container offsets, explicit boot-sector counts, side ordering or track skew. Do not) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (mistake the allocation area for the first payload block.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 5) Tj ET
 endstream
 endobj
 16 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 17 0 R >>
 endobj
 17 0 obj
-<< /Length 1339 >>
+<< /Length 1352 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Logical and physical extents) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(A logical extent represents 128 records = 16384 bytes. The 16-byte allocation) Tj
-T* (array contains sixteen 8-bit block numbers when DSM is at most 255, or eight) Tj
-T* (little-endian 16-bit block numbers for larger ordinary profiles. Its byte) Tj
-T* (capacity can hold one or several logical extents. EXM masks the low logical) Tj
-T* (extent bits contained in one physical directory entry; let e = 32*\(S2 masked) Tj
-T* (for the admitted revision\)+ \(EX masked to its low five bits\). Physical-entry) Tj
-T* (ordinal = floor\(e/\(EXM+1\)\); first logical extent = e-\(e mod \(EXM+1\)\). The) Tj
-T* (occupied record count in that entry is \(e mod \(EXM+1\)\)*128+RC, where RC) Tj
-T* (ranges from zero through 128. CP/M 2.2 and Plus differ in maximum extent) Tj
-T* (numbers; use revision-specific high-bit rules. Do not confuse physical) Tj
-T* (directory entries with contiguous disk extents.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 6 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (5. Directory record and names) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Every directory record is 32 bytes. Byte 0 is status or user number; bytes 1..8) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (hold padded filename; 9..11 hold extension; 12 is EX, 13 S1 or byte-count field) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (according to revision, 14 S2, 15 RC, 16..31 allocation pointers. Mask attribute) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (bits before comparing the native 7-bit name. CP/M 2.2 typically uses user areas) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (0..15 and 0xE5 for deleted/unused entries. The extension's high bits encode) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (read-only, system and, on later systems, archive status. Names are space-padded 8.3) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (identities, normally uppercase. User area is part of the file key, not a) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (hierarchical directory or a distinct user permission object.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 6) Tj ET
 endstream
 endobj
 18 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 19 0 R >>
 endobj
 19 0 obj
-<< /Length 1194 >>
+<< /Length 1700 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Worked address and length example) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Consider a simple CP/M 2.2 profile with 1 KiB blocks, 8-bit pointers, EXM=0,) Tj
-T* (26 records per track, two reserved tracks, 64 directory slots. Data area) Tj
-T* (offset is 6656 bytes; directory consumes 2048 bytes in blocks 0 and 1. File) Tj
-T* (entries with EX=0, S2=0, RC=128 and EX=1, S2=0, RC=24 describe a file of 152) Tj
-T* (records or 19456 bytes at record granularity. In the second entry, pointer 5) Tj
-T* (denotes offset 6656+5120=11776 in a linear logical image. Its third pointer,) Tj
-T* (if 9, denotes offset 15872. A real physical-sector image may need a) Tj
-T* (profile-specific skew transformation before applying these byte positions. Do) Tj
-T* (not infer the exact last byte of a binary file from CP/M 2.2 record counts.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 7 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (6. Logical and physical extents) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (A logical extent represents 128 records = 16384 bytes. The 16-byte allocation array) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (contains sixteen 8-bit block numbers when DSM is at most 255, or eight) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (little-endian 16-bit block numbers for larger ordinary profiles. Its byte capacity) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (can hold one or several logical extents. EXM masks the low logical extent bits) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (contained in one physical directory entry; let e = 32*\(S2 masked for the admitted) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (revision\)+ \(EX masked to its low five bits\). Physical-entry ordinal =) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (floor\(e/\(EXM+1\)\); first logical extent = e-\(e mod \(EXM+1\)\). The occupied record) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (count in that entry is \(e mod \(EXM+1\)\)*128+RC, where RC ranges from zero through) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (128. CP/M 2.2 and Plus differ in maximum extent numbers; use revision-specific) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (high-bit rules. Do not confuse physical directory entries with contiguous disk) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 566 Td (extents.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 7) Tj ET
 endstream
 endobj
 20 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 21 0 R >>
 endobj
 21 0 obj
-<< /Length 1255 >>
+<< /Length 1473 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Reading, sparse records and metadata) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Group live entries by user area and canonical masked name, order by physical) Tj
-T* (extent ordinal, reject conflicting duplicates and impossible record counts,) Tj
-T* (and map each logical allocation block to its pointer. A zero allocation) Tj
-T* (pointer represents unallocated storage, not data block zero. CP/M) Tj
-T* (random-record access can have holes; preserve the original missing-record) Tj
-T* (semantics instead of silently treating them as allocated zero data. File size) Tj
-T* (is derived from the highest valid extent and its record count; CP/M Plus can) Tj
-T* (supply last-record byte information, depending on revision. A text EOF marker) Tj
-T* (such as 0x1A is a convention, not a universal binary length delimiter.) Tj
-T* (Preserve unknown attribute flags and metadata record types.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 8 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (7. Worked address and length example) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Consider a simple CP/M 2.2 profile with 1 KiB blocks, 8-bit pointers, EXM=0, 26) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (records per track, two reserved tracks, 64 directory slots. Data area offset is) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (6656 bytes; directory consumes 2048 bytes in blocks 0 and 1. File entries with) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (EX=0, S2=0, RC=128 and EX=1, S2=0, RC=24 describe a file of 152 records or 19456) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (bytes at record granularity. In the second entry, pointer 5 denotes offset) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (6656+5120=11776 in a linear logical image. Its third pointer, if 9, denotes offset) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (15872. A real physical-sector image may need a profile-specific skew transformation) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (before applying these byte positions. Do not infer the exact last byte of a binary) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (file from CP/M 2.2 record counts.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 8) Tj ET
 endstream
 endobj
 22 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 23 0 R >>
 endobj
 23 0 obj
-<< /Length 1307 >>
+<< /Length 1526 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Allocation, directory capacity and writes) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Ordinary CP/M rebuilds the allocation vector by scanning directory pointers) Tj
-T* (rather than reading a persistent free-block bitmap. Mark directory-reserved) Tj
-T* (blocks before processing live files; reject duplicate ownership, out-of-range) Tj
-T* (pointers and references into reserved blocks. Directory slots and free blocks) Tj
-T* (are independent capacity limits. To create or grow a file, allocate suitable) Tj
-T* (blocks and physical directory extent entries, write record data, then publish) Tj
-T* (coherent directory metadata; ordinary CP/M offers no general transaction) Tj
-T* (journal. Exact native update and recovery ordering must be specified and) Tj
-T* (tested for the chosen revision. Rename all extent records consistently.) Tj
-T* (Erasing a file changes status to 0xE5; old bytes and pointers may remain) Tj
-T* (until reused.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 9 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (8. Reading, sparse records and metadata) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Group live entries by user area and canonical masked name, order by physical extent) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (ordinal, reject conflicting duplicates and impossible record counts, and map each) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (logical allocation block to its pointer. A zero allocation pointer represents) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (unallocated storage, not data block zero. CP/M random-record access can have holes;) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (preserve the original missing-record semantics instead of silently treating them as) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (allocated zero data. File size is derived from the highest valid extent and its) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (record count; CP/M Plus can supply last-record byte information, depending on) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (revision. A text EOF marker such as 0x1A is a convention, not a universal binary) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (length delimiter. Preserve unknown attribute flags and metadata record types.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 9) Tj ET
 endstream
 endobj
 24 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 25 0 R >>
 endobj
 25 0 obj
-<< /Length 1200 >>
+<< /Length 1620 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (CP/M Plus and variants) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(CP/M Plus extends the directory with label, password and timestamp records;) Tj
-T* (compatible systems sometimes use the same status values with different) Tj
-T* (semantics. Status 0x20 and 0x21 are not ordinary file-user values in the) Tj
-T* (relevant Plus profiles. Timestamp records can describe preceding directory) Tj
-T* (slots, and their placement is therefore significant during compaction. A) Tj
-T* (profile must define whether S1 is reserved or stores byte-count information,) Tj
-T* (the exact extent masks, maximum name/user values and timestamp format. Do not) Tj
-T* (treat passwords as ordinary file metadata or silently discard an unknown) Tj
-T* (protection record. A generic reader should refuse unrecognized directory) Tj
-T* (types for writes.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 10 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (9. Allocation, directory capacity and writes) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Ordinary CP/M rebuilds the allocation vector by scanning directory pointers rather) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (than reading a persistent free-block bitmap. Mark directory-reserved blocks before) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (processing live files; reject duplicate ownership, out-of-range pointers and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (references into reserved blocks. Directory slots and free blocks are independent) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (capacity limits. To create or grow a file, allocate suitable blocks and physical) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (directory extent entries, write record data, then publish coherent directory) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (metadata; ordinary CP/M offers no general transaction journal. Exact native update) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (and recovery ordering must be specified and tested for the chosen revision. Rename) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (all extent records consistently. Erasing a file changes status to 0xE5; old bytes) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (and pointers may remain until reused.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 10) Tj ET
 endstream
 endobj
 26 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 27 0 R >>
 endobj
 27 0 obj
-<< /Length 1307 >>
+<< /Length 1472 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Forensics, format and validation) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(A formatter requires an exact media profile, reserved-track policy, initial) Tj
-T* (directory state, allocation count and directory reservation; it must not) Tj
-T* (invent a boot image. Reconstruct a read-only ownership map from live entries,) Tj
-T* (then compare with independent tools. Deleted entries are evidence only:) Tj
-T* (recovery is possible only if all needed pointers and data remain intact and) Tj
-T* (unclaimed. A defragmenter must relocate actual allocation blocks and update) Tj
-T* (every owning extent without violating file record order or timestamp-slot) Tj
-T* (rules. Test empty files, 128/129-record transitions, EXM>0, 8- and 16-bit) Tj
-T* (pointers, multiple users, duplicate names, sparse records, full directory,) Tj
-T* (reserved blocks, skewed and unskewed images, deleted records, corrupt extents) Tj
-T* (and interrupted writes.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 11 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (10. CP/M Plus and variants) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (CP/M Plus extends the directory with label, password and timestamp records;) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (compatible systems sometimes use the same status values with different semantics.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (Status 0x20 and 0x21 are not ordinary file-user values in the relevant Plus) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (profiles. Timestamp records can describe preceding directory slots, and their) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (placement is therefore significant during compaction. A profile must define whether) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (S1 is reserved or stores byte-count information, the exact extent masks, maximum) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (name/user values and timestamp format. Do not treat passwords as ordinary file) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (metadata or silently discard an unknown protection record. A generic reader should) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (refuse unrecognized directory types for writes.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 11) Tj ET
 endstream
 endobj
 28 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 29 0 R >>
 endobj
 29 0 obj
-<< /Length 1301 >>
+<< /Length 1620 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Primary sources and implementation boundary) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(Digital Research, CP/M Operating System Manual, July 1982:) Tj
-T* (https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Ju) Tj
-T* (l82.pdf . CP/M 2.2 and Plus format cross-checks:) Tj
-T* (https://www.seasip.info/Cpm/format22.html and) Tj
-T* (https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions:) Tj
-T* (https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and) Tj
-T* (https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . The) Tj
-T* (repository's native design and migration status define intended Common V2) Tj
-T* (implementation; this manual does not assert that a provider or release) Tj
-T* (exists. Exact machine-specific sector profiles, Plus password/time encoding) Tj
-T* (and write ordering require verification before claiming a complete) Tj
-T* (independent writer.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 12 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (11. Forensics, format and validation) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (A formatter requires an exact media profile, reserved-track policy, initial) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (directory state, allocation count and directory reservation; it must not invent a) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (boot image. Reconstruct a read-only ownership map from live entries, then compare) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (with independent tools. Deleted entries are evidence only: recovery is possible) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (only if all needed pointers and data remain intact and unclaimed. A defragmenter) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (must relocate actual allocation blocks and update every owning extent without) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (violating file record order or timestamp-slot rules. Test empty files,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (128/129-record transitions, EXM>0, 8- and 16-bit pointers, multiple users,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (duplicate names, sparse records, full directory, reserved blocks, skewed and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (unskewed images, deleted records, corrupt extents and interrupted writes.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 12) Tj ET
 endstream
 endobj
 30 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 31 0 R >>
 endobj
 31 0 obj
-<< /Length 602 >>
+<< /Length 1691 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.01 0.52 0.56 rg 50 747 116 5 re f
-1 1 1 rg BT /F2 11 Tf 50 807 Td (INFILTRATOR / FILESYSTEM ENGINEERING REFERENCE) Tj ET
-BT /F2 21 Tf 50 775 Td (CPM - technical reference) Tj ET
-0.05 0.13 0.22 rg BT /F2 16 Tf 50 715 Td (Historical reference appendices) Tj ET
-BT /F1 11 Tf 15 TL 50 685 Td
-(The following pages preserve both previous documents. Their dated) Tj
-T* (implementation statements are historical evidence, not a qualification claim.) Tj
-ET
-0.05 0.13 0.22 rg BT /F1 9 Tf 50 42 Td (Engineering chapter 13 | Original format, not provider qualification) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (12. Implementation and qualification boundary) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (The independent provider uses Common V2:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (https://github.com/Infiltrator-Projects/Libraries/blob/main/docs/FILESYSTEM_COMMON_) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (ABI_V2.md . Negotiate actual operation masks and media profiles. Distinguish) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (unsupported, corrupt, I/O and stale-handle results. Require bounded host I/O,) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (exclusive unmounted ownership and durable flush before mutation. Test Media and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (Defragmenter consume the same engine, not separate format parsers. Hosted and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (freestanding binaries, relocation, recovery, BOOT, kernel integration and packages) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (require separate exact-source evidence. Current support belongs to the repository) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (README and qualification records. The intended package paths are) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (/System/Filesystems/ and /System/Resources/Documentation/; the reference is not an) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 566 Td (installation or release-status claim.) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 13) Tj ET
 endstream
 endobj
 32 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 33 0 R >>
 endobj
 33 0 obj
-<< /Length 1648 >>
+<< /Length 2125 >>
 stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 01) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (HISTORY / ORIGINAL DESIGN / DISK FORMAT) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (CP/M disk profiles; no universal magic-based identity. This is a design) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (contract, not a claim of implemented capabilities.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 630 Tm (Native provider design and original-format reference. No independent runtime) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 614 Tm (provider has yet been qualified.) Tj ET
-BT /F2 11 Tf 0.02 0.50 0.55 rg 1 0 0 1 50 584 Tm (CONCEPTUAL MEDIA MAP - NOT A SECTOR MAP) Tj ET
-0.05 0.36 0.47 rg 50 507 238 62 re f
-BT /F2 11 Tf 1 1 1 rg 1 0 0 1 62 533 Tm (Disk profile) Tj ET
-0.05 0.36 0.47 rg 301 507 238 62 re f
-BT /F2 11 Tf 1 1 1 rg 1 0 0 1 313 533 Tm (Reserved tracks) Tj ET
-0.05 0.36 0.47 rg 50 431 238 62 re f
-BT /F2 11 Tf 1 1 1 rg 1 0 0 1 62 457 Tm (32-byte directory) Tj ET
-0.05 0.36 0.47 rg 301 431 238 62 re f
-BT /F2 11 Tf 1 1 1 rg 1 0 0 1 313 457 Tm (Allocation blocks) Tj ET
-BT /F2 10 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 404 Tm (History / architecture / allocation / integrity / implementation / tests) Tj ET
-endstream
-endobj
-34 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 35 0 R >>
-endobj
-35 0 obj
-<< /Length 1327 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 02) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (HISTORICAL CHRONOLOGY) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (CP/M emerged in the floppy-disk microcomputer era. Machine-specific disk) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (parameter blocks and sector ordering mean there is no universal) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (self-describing CP/M format.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 614 Tm (The historic format and the InfiltratorOS implementation are distinct. An) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 598 Tm (external driver or archival utility is evidence, not a qualified production) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 582 Tm (provider.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 552 Tm (https://manpages.debian.org/trixie/cpmtools/diskdefs.5.en.html) Tj ET
-endstream
-endobj
-36 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 37 0 R >>
-endobj
-37 0 obj
-<< /Length 1050 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 03) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (ORIGINAL ON-DISK ARCHITECTURE) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (Explicit disk definitions, sector skew, reserved tracks, allocation-block) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (width, directory extent numbering, user areas and filename attributes. The) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (single native C/C++ engine owns these format semantics; consumers provide) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (bounded Common V2 host services, never competing parsers.) Tj ET
-endstream
-endobj
-38 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 39 0 R >>
-endobj
-39 0 obj
-<< /Length 1400 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 04) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (ALLOCATION, INTEGRITY AND RECOVERY) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (Require a validated profile before interpreting ambiguous media. Check) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (allocation references, extent chains and record counts, and avoid mixing user) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (areas. Mutation must preserve extent and allocation accounting; no assumed) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (journal. All arithmetic, offsets and lengths are checked before I/O. Writable) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (operations require exclusive access, explicit ordering, flush and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (interruption/recovery evidence. Read-only operations leave the medium) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 580 Tm (unchanged.) Tj ET
-endstream
-endobj
-40 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 41 0 R >>
-endobj
-41 0 obj
-<< /Length 1823 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 05) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (DISK READ PATH / SOURCE EVIDENCE) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (Original editable source) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (\(https://github.com/Infiltrator-Projects/Filesystems/blob/101026021d9088d80b7) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (f0f472d9061f0e2c688a3/native/filesystems/cpm/userspace/cpmfs.c\) \(blob) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (5de3cff97a...\). The imported cpmtools code accounts for 32-byte directory) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (records, reserves the directory's allocation blocks, derives sector/track) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (addressing from secLength, sectrk, boottrk and blksiz, and recognizes deleted) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 580 Tm (record status 0xe5. Preserve diskdefs profile semantics, including skew,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 564 Tm (extent numbering and user-area identity. Reject ambiguous profile matches) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 548 Tm (instead of assuming a universal on-media magic. Qualify file lookup and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 532 Tm (extent ordering across actual profiles before modifying directory entries.) Tj ET
-endstream
-endobj
-42 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 43 0 R >>
-endobj
-43 0 obj
-<< /Length 1550 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 06) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (COMMON V2 IMPLEMENTATION BOUNDARY) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (Only infiltrator_filesystem_api_v2 is public. Target the genuine) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (PROBE/MOUNT/UNMOUNT/STAT/LIST/READ operations first; negotiate actual) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (supported operation masks. VOLUME, METADATA and DEFRAG operations \(including) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (MAP, PLAN, EXECUTE, VERIFY, RECOVER\) are individually qualified or refused.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (Test Media uses the same provider's qualified format and namespace) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (operations. No FUSE, legacy ABI, private driver or kernel proxy. Hosted and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 580 Tm (import-free freestanding profiles share the format engine, with generic) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 564 Tm (environment-specific host services.) Tj ET
-endstream
-endobj
-44 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 45 0 R >>
-endobj
-45 0 obj
-<< /Length 1847 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 07) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (ENGINEERING ACCEPTANCE / HOST I/O) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (- A valid CORE descriptor with a real PROBE is mandatory. Every optional) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (operation has its own capability bit and non-null qualified callback;) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (unavailable operations have neither. Recognised format, unsupported feature,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (corruption, host I/O failure and stale handles remain distinct outcomes.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 598 Tm (- Use Common's sector-aligned bounded byte helpers. Validate partition) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 582 Tm (extent, logical/physical sector geometry and maximum transfer before reading.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 566 Tm (Serialize overlapping read/modify/write sectors; request explicit flush) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 550 Tm (barriers. Never infer exclusivity from flags alone; require real exclusive) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 534 Tm (unmounted ownership before formatting or raw mutation. Require the Common) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 518 Tm (entropy service when the format needs a unique identity.) Tj ET
-endstream
-endobj
-46 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 47 0 R >>
-endobj
-47 0 obj
-<< /Length 1981 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 08) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (CONSUMERS / RELOCATION / TEST MEDIA) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (- Qualify hosted and import-free freestanding profiles separately; enforce) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (module identity and trust, exact export set and actual packaged bytes. BOOT) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (and kernel are generic loaders; BOOT uses the same file in) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (/EFI/InfiltratorOS/BOOT/drivers_x64/, with the installed canonical copy in) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (/System/Filesystems/. No per-format .ko/.efi, FUSE, proxy, legacy ABI,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (external formatter or consumer-side parsing substitutes for the engine.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 566 Tm (- Test Media must format and populate through actual V2 FORMAT/CREATE/WRITE) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 550 Tm (operations; an independent formatter/reader may be a test oracle only, never) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 534 Tm (production fallback. Defragmentation maps, plans, execution, verification and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 518 Tm (recovery require independent proof of ownership, data preservation and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 502 Tm (interruption safety. Where not implemented they remain absent.) Tj ET
-endstream
-endobj
-48 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 49 0 R >>
-endobj
-49 0 obj
-<< /Length 1449 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 09) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (VALIDATION, RECOVERY AND COMPATIBILITY) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (Use independent cpmtools-generated media for multiple profiles; test extent) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (rollover, deleted entries, duplicate blocks and ambiguous geometry. Source) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (baseline lipro-cpm4l/cpmtools e534e20c15973a9559e981efb498a102020e5db7.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (Compare file bytes against an independent oracle, hash unchanged read-only) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (images, inject short I/O, corruption and interruption; validate exact) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (published module separately in BOOT and kernel. Use disposable media only. No) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 580 Tm (new independent binary or test pass is claimed.) Tj ET
-endstream
-endobj
-50 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 51 0 R >>
-endobj
-51 0 obj
-<< /Length 2176 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 10) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (BUILD, INSTALLATION AND RELEASE) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (The target installation is /System/Filesystems/CPM.so and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 660 Tm (/System/Resources/Documentation/Filesystem-CPM.pdf. Neither file is currently) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 644 Tm (distributed by this repository. Once the implementation qualifies, the) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 628 Tm (intended release is a portable amd64 DEB and CPU-native source-first RUN,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 612 Tm (with GitHub's automatic source archive. No install or build command is) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 596 Tm (advertised before an executable build exists.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 566 Tm (- New build and implementation code is native C/C++ and shell as appropriate,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 550 Tm (no Python. The generic amd64 DEB and CPU-native source-downloading RUN are) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 534 Tm (the only manually published release assets; GitHub generates source archives.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 518 Tm (RUN fetches exact versioned source and pinned Common dependency, verifies) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 502 Tm (integrity, compiles natively and installs the selected package; no source) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 486 Tm (archive or DEB embedded. Release immutable exact-main qualification only. No) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 470 Tm (release exists yet.) Tj ET
-endstream
-endobj
-52 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 53 0 R >>
-endobj
-53 0 obj
-<< /Length 2329 >>
-stream
-0.05 0.13 0.22 rg 0 749 595 93 re f
-0.04 0.54 0.60 rg 50 747 115 4 re f
-0.78 0.82 0.86 RG 0.6 w 50 50 m 545 50 l S
-BT /F2 9 Tf 0.62 0.86 0.90 rg 1 0 0 1 50 801 Tm (INFILTRATOR / ORIGINAL FILESYSTEM HISTORY AND DESIGN) Tj ET
-BT /F2 19 Tf 1 1 1 rg 1 0 0 1 50 771 Tm (CP/M filesystem) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 34 Tm (Filesystem-CPM / engineering reference) Tj ET
-BT /F1 8 Tf 0.07 0.16 0.23 rg 1 0 0 1 512 34 Tm (PAGE 11) Tj ET
-BT /F2 14 Tf 0.02 0.45 0.50 rg 1 0 0 1 50 711 Tm (PRIMARY SOURCES AND IMPLEMENTATION STATUS) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 676 Tm (https://manpages.debian.org/trixie/cpmtools/diskdefs.5.en.html) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 646 Tm () Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 630 Tm (https://github.com/Infiltrator-Projects/Filesystems/tree/101026021d9088d80b7f) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 614 Tm (0f472d9061f0e2c688a3/native/filesystems/cpm) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 584 Tm () Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 568 Tm (https://github.com/Infiltrator-Projects/Libraries/blob/main/docs/FILESYSTEM_C) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 552 Tm (OMMON_ABI_V2.md) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 522 Tm (Independent CP/M disk profiles, extent chains, duplicate allocations and) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 506 Tm (ambiguous geometry. Compare independent payloads and unchanged-image hashes;) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 490 Tm (inject truncation, corruption and I/O faults. Establish exact-revision ABI,) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 474 Tm (hosted and import-free freestanding qualification, then independently test) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 458 Tm (BOOT and kernel integration. No local build, runtime or packaging) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 442 Tm (qualification is claimed.) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 412 Tm (Source extraction, implementation and release qualification remain) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 396 Tm (outstanding. This is a source-backed engineering reference, not a complete) Tj ET
-BT /F1 10.2 Tf 0.07 0.16 0.23 rg 1 0 0 1 50 380 Tm (original specification.) Tj ET
-endstream
-endobj
-54 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 55 0 R >>
-endobj
-55 0 obj
-<< /Length 2502 >>
-stream
-0.05 0.13 0.22 rg 0 750 595 92 re f
-0.03 0.53 0.58 rg 50 747 120 4 re f
-0.75 0.82 0.86 RG .7 w 50 49 m 545 49 l S
-BT /F2 9 Tf 0.62 0.88 0.91 rg 1 0 0 1 50 803 Tm (INFILTRATOR / FILESYSTEM DESIGN & QUALIFICATION) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 50 773 Tm (CPM - format and architecture) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 50 34 Tm (Filesystem-CPM | Design-stage reference | 2207e33993a3) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 505 34 Tm (PAGE 01) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 706 Tm (STATUS / DESIGN CONTRACT) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 681 Tm (This repository is at the design stage. No independent runtime provider, installation) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 665 Tm (package or qualified filesystem operations are claimed. This document is not an) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 649 Tm (installation or user manual.) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 614 Tm (Format scope) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 589 Tm (CP/M disk profiles; no universal magic-based identity. This is a design contract, not a) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 573 Tm (claim of implemented capabilities.) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 538 Tm (On-disk structures and ownership) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 513 Tm (Explicit disk definitions, sector skew, reserved tracks, allocation-block width,) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 497 Tm (directory extent numbering, user areas and filename attributes. The single native) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 481 Tm (C/C++ engine owns these format semantics; consumers provide bounded Common V2 host) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 465 Tm (services, never competing parsers.) Tj ET
-BT /F2 11 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 430 Tm (Conceptual provider boundary \(planned\)) Tj ET
-0.91 0.95 0.96 rg 50 385 110 30 re f
-BT /F2 9 Tf 0.08 0.16 0.23 rg 1 0 0 1 57 396 Tm (Native media) Tj ET
-0.03 0.53 0.58 RG 1 w 162 400 m 176 400 l S
-0.91 0.95 0.96 rg 178 385 110 30 re f
-BT /F2 9 Tf 0.08 0.16 0.23 rg 1 0 0 1 185 396 Tm (Bounded host I/O) Tj ET
-0.03 0.53 0.58 RG 1 w 290 400 m 304 400 l S
-0.91 0.95 0.96 rg 306 385 110 30 re f
-BT /F2 9 Tf 0.08 0.16 0.23 rg 1 0 0 1 313 396 Tm (Native engine) Tj ET
-0.03 0.53 0.58 RG 1 w 418 400 m 432 400 l S
-0.91 0.95 0.96 rg 434 385 110 30 re f
-BT /F2 9 Tf 0.08 0.16 0.23 rg 1 0 0 1 441 396 Tm (Common V2) Tj ET
-endstream
-endobj
-56 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 57 0 R >>
-endobj
-57 0 obj
-<< /Length 1974 >>
-stream
-0.05 0.13 0.22 rg 0 750 595 92 re f
-0.03 0.53 0.58 rg 50 747 120 4 re f
-0.75 0.82 0.86 RG .7 w 50 49 m 545 49 l S
-BT /F2 9 Tf 0.62 0.88 0.91 rg 1 0 0 1 50 803 Tm (INFILTRATOR / FILESYSTEM DESIGN & QUALIFICATION) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 50 773 Tm (CPM - integrity and failure) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 50 34 Tm (Filesystem-CPM | Design-stage reference | 2207e33993a3) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 505 34 Tm (PAGE 02) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 706 Tm (Integrity and mutation invariants) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 681 Tm (Require a validated profile before interpreting ambiguous media. Check allocation) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 665 Tm (references, extent chains and record counts, and avoid mixing user areas. Mutation) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 649 Tm (must preserve extent and allocation accounting; no assumed journal. All arithmetic,) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 633 Tm (offsets and lengths are checked before I/O. Writable operations require exclusive) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 617 Tm (access, explicit ordering, flush and interruption/recovery evidence. Read-only) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 601 Tm (operations leave the medium unchanged.) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 566 Tm (Failure and ownership policy) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 541 Tm (Validate before following on-disk references. Unsupported feature combinations,) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 525 Tm (malformed media, unavailable operations and host failures are distinct outcomes.) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 509 Tm (Mutation requires the ownership and ordering conditions in the design; read-only) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 493 Tm (operations must leave the source image unchanged.) Tj ET
-endstream
-endobj
-58 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 59 0 R >>
-endobj
-59 0 obj
-<< /Length 2492 >>
-stream
-0.05 0.13 0.22 rg 0 750 595 92 re f
-0.03 0.53 0.58 rg 50 747 120 4 re f
-0.75 0.82 0.86 RG .7 w 50 49 m 545 49 l S
-BT /F2 9 Tf 0.62 0.88 0.91 rg 1 0 0 1 50 803 Tm (INFILTRATOR / FILESYSTEM DESIGN & QUALIFICATION) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 50 773 Tm (CPM - interface and qualification) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 50 34 Tm (Filesystem-CPM | Design-stage reference | 2207e33993a3) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 505 34 Tm (PAGE 03) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 706 Tm (Common V2 boundary) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 681 Tm (Only infiltrator_filesystem_api_v2 is public. Target the genuine) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 665 Tm (PROBE/MOUNT/UNMOUNT/STAT/LIST/READ operations first; negotiate actual) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 649 Tm (supported operation masks. VOLUME, METADATA and DEFRAG operations \(including) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 633 Tm (MAP, PLAN, EXECUTE, VERIFY, RECOVER\) are individually qualified or refused.) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 617 Tm (Test Media uses the same provider's qualified format and namespace operations. No) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 601 Tm (FUSE, legacy ABI, private driver or kernel proxy. Hosted and import-free) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 585 Tm (freestanding profiles share the format engine, with generic environment-specific host) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 569 Tm (services.) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 534 Tm (Independent qualification) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 509 Tm (Use independent cpmtools-generated media for multiple profiles; test extent rollover,) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 493 Tm (deleted entries, duplicate blocks and ambiguous geometry. Source baseline) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 477 Tm (lipro-cpm4l/cpmtools e534e20c15973a9559e981efb498a102020e5db7. Compare file bytes) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 461 Tm (against an independent oracle, hash unchanged read-only images, inject short I/O,) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 445 Tm (corruption and interruption; validate exact published module separately in BOOT and) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 429 Tm (kernel. Use disposable media only. No new independent binary or test pass is claimed.) Tj ET
-endstream
-endobj
-60 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 61 0 R >>
-endobj
-61 0 obj
-<< /Length 4545 >>
-stream
-0.05 0.13 0.22 rg 0 750 595 92 re f
-0.03 0.53 0.58 rg 50 747 120 4 re f
-0.75 0.82 0.86 RG .7 w 50 49 m 545 49 l S
-BT /F2 9 Tf 0.62 0.88 0.91 rg 1 0 0 1 50 803 Tm (INFILTRATOR / FILESYSTEM DESIGN & QUALIFICATION) Tj ET
-BT /F2 17 Tf 1 1 1 rg 1 0 0 1 50 773 Tm (CPM - engineering acceptance) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 50 34 Tm (Filesystem-CPM | Design-stage reference | 2207e33993a3) Tj ET
-BT /F1 8 Tf 0.34 0.4 0.44 rg 1 0 0 1 505 34 Tm (PAGE 04) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 706 Tm (Engineering and release acceptance) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 681 Tm (- A valid CORE descriptor with a real PROBE is mandatory. Every optional operation) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 665 Tm (has its own capability bit and non-null qualified callback; unavailable operations have) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 649 Tm (neither. Recognised format, unsupported feature, corruption, host I/O failure and) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 633 Tm (stale handles remain distinct outcomes. - Use Common's sector-aligned bounded byte) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 617 Tm (helpers. Validate partition extent, logical/physical sector geometry and maximum) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 601 Tm (transfer before reading. Serialize overlapping read/modify/write sectors; request) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 585 Tm (explicit flush barriers. Never infer exclusivity from flags alone; require real exclusive) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 569 Tm (unmounted ownership before formatting or raw mutation. Require the Common entropy) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 553 Tm (service when the format needs a unique identity. - Qualify hosted and import-free) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 537 Tm (freestanding profiles separately; enforce module identity and trust, exact export set) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 521 Tm (and actual packaged bytes. BOOT and kernel are generic loaders; BOOT uses the same) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 505 Tm (file in /EFI/InfiltratorOS/BOOT/drivers_x64/, with the installed canonical copy in) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 489 Tm (/System/Filesystems/. No per-format .ko/.efi, FUSE, proxy, legacy ABI, external) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 473 Tm (formatter or consumer-side parsing substitutes for the engine. - Test Media must) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 457 Tm (format and populate through actual V2 FORMAT/CREATE/WRITE operations; an) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 441 Tm (independent formatter/reader may be a test oracle only, never production fallback.) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 425 Tm (Defragmentation maps, plans, execution, verification and recovery require independent) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 409 Tm (proof of ownership, data preservation and interruption safety. Where not implemented) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 393 Tm (they remain absent. - New build and implementation code is native C/C++ and shell as) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 377 Tm (appropriate, no Python. The generic amd64 DEB and CPU-native source-downloading) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 361 Tm (RUN are the only manually published release assets; GitHub generates source) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 345 Tm (archives. RUN fetches exact versioned source and pinned Common dependency, verifies) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 329 Tm (integrity, compiles natively and installs the selected package; no source archive or) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 313 Tm (DEB embedded. Release immutable exact-main qualification only. No release exists yet.) Tj ET
-BT /F2 12 Tf 0.02 0.48 0.52 rg 1 0 0 1 50 278 Tm (Source and authority) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 253 Tm (Prepared from README.md and native/filesystems/cpm/DESIGN.md at revision) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 237 Tm (2207e33993a35f4e38e0880a9697881bdcb2c569. The editable Markdown design and) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 221 Tm (migration status are authoritative. No test result, release or implemented capability) Tj ET
-BT /F1 10.5 Tf 0.08 0.16 0.23 rg 1 0 0 1 50 205 Tm (is inferred from this reference.) Tj ET
+0.06 0.15 0.23 rg 0 768 595 74 re f
+1 1 1 rg BT /F2 10 Tf 43 811 Td (INFILTRATOR / FILESYSTEM ENGINEERING) Tj ET
+BT /F2 22 Tf 43 784 Td (CPM - technical reference) Tj ET
+0.08 0.14 0.20 rg BT /F2 15 Tf 43 736 Td (13. Primary sources and implementation boundary) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 706 Td (Digital Research, CP/M Operating System Manual, July 1982:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 692 Td (https://bitsavers.org/pdf/digitalResearch/cpm/CPM_Operating_System_Manual_Jul82.pdf) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 678 Td (. CP/M 2.2 and Plus format cross-checks: https://www.seasip.info/Cpm/format22.html) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 664 Td (and https://www.seasip.info/Cpm/format31.html . Independent cpmtools definitions:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 650 Td (https://manpages.debian.org/testing/cpmtools/cpm.5.en.html and) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 636 Td (https://manpages.debian.org/unstable/cpmtools/diskdefs.5.en.html . The repository's) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 622 Td (native design and migration status define intended Common V2 implementation; this) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 608 Td (manual does not assert that a provider or release exists. Exact machine-specific) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 594 Td (sector profiles, Plus password/time encoding and write ordering require) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 580 Td (verification before claiming a complete independent writer.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 556 Td (The imported cpmtools baseline is lipro-cpm4l/cpmtools) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 542 Td (e534e20c15973a9559e981efb498a102020e5db7.) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 518 Td (Retained source:) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 504 Td (https://github.com/Infiltrator-Projects/Filesystems/blob/101026021d9088d80b7f0f472d) Tj ET
+0.08 0.14 0.20 rg BT /F3 10 Tf 43 490 Td (9061f0e2c688a3/native/filesystems/cpm/userspace/cpmfs.c \(blob 5de3cff97a\).) Tj ET
+0.2 0.3 0.4 rg BT /F1 9 Tf 43 32 Td (Historical development and engineering reference | 14) Tj ET
 endstream
 endobj
 xref
-0 62
+0 34
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000304 00000 n 
-0000000374 00000 n 
-0000000449 00000 n 
-0000000517 00000 n 
-0000000663 00000 n 
-0000001822 00000 n 
-0000001968 00000 n 
-0000003134 00000 n 
-0000003282 00000 n 
-0000004528 00000 n 
-0000004676 00000 n 
-0000005868 00000 n 
-0000006016 00000 n 
-0000007190 00000 n 
-0000007338 00000 n 
-0000008729 00000 n 
-0000008877 00000 n 
-0000010123 00000 n 
-0000010271 00000 n 
-0000011578 00000 n 
-0000011726 00000 n 
-0000013085 00000 n 
-0000013233 00000 n 
-0000014485 00000 n 
-0000014633 00000 n 
-0000015992 00000 n 
-0000016140 00000 n 
-0000017493 00000 n 
-0000017641 00000 n 
-0000018294 00000 n 
-0000018442 00000 n 
-0000020142 00000 n 
-0000020290 00000 n 
-0000021669 00000 n 
-0000021817 00000 n 
-0000022919 00000 n 
-0000023067 00000 n 
-0000024519 00000 n 
-0000024667 00000 n 
-0000026542 00000 n 
-0000026690 00000 n 
-0000028292 00000 n 
-0000028440 00000 n 
-0000030339 00000 n 
-0000030487 00000 n 
-0000032520 00000 n 
-0000032668 00000 n 
-0000034169 00000 n 
-0000034317 00000 n 
-0000036545 00000 n 
-0000036693 00000 n 
-0000039074 00000 n 
-0000039222 00000 n 
-0000041776 00000 n 
-0000041924 00000 n 
-0000043950 00000 n 
-0000044098 00000 n 
-0000046642 00000 n 
-0000046790 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000351 00000 n 
+0000000419 00000 n 
+0000000565 00000 n 
+0000002044 00000 n 
+0000002190 00000 n 
+0000003587 00000 n 
+0000003735 00000 n 
+0000005132 00000 n 
+0000005280 00000 n 
+0000007254 00000 n 
+0000007402 00000 n 
+0000008824 00000 n 
+0000008972 00000 n 
+0000010376 00000 n 
+0000010524 00000 n 
+0000012276 00000 n 
+0000012424 00000 n 
+0000013949 00000 n 
+0000014097 00000 n 
+0000015675 00000 n 
+0000015823 00000 n 
+0000017495 00000 n 
+0000017643 00000 n 
+0000019167 00000 n 
+0000019315 00000 n 
+0000020987 00000 n 
+0000021135 00000 n 
+0000022878 00000 n 
+0000023026 00000 n 
 trailer
-<< /Size 62 /Root 1 0 R >>
+<< /Size 34 /Root 1 0 R >>
 startxref
-51387
+25203
 %%EOF
