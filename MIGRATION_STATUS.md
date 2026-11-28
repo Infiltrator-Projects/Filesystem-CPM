@@ -1,17 +1,5 @@
-# CPM Common V2 migration status
+# CPM Common V2 migration
 
-## Source and ownership
+An independent native read-only implementation now exists for the explicitly marked PCW180 profile. The retained [cpmtools source](https://github.com/Infiltrator-Projects/Filesystems/tree/101026021d9088d80b7f0f472d9061f0e2c688a3/native/filesystems/cpm) is the reference for the JCE boot specification, CP/M directory and exact record length semantics; original notices remain intact. New code is GPL-3.0-or-later.
 
-[Exact central source baseline](https://github.com/Infiltrator-Projects/Filesystems/tree/101026021d9088d80b7f0f472d9061f0e2c688a3/native/filesystems/cpm). Original cpmtools userspace source remains centrally, pinned at e534e20c15973a9559e981efb498a102020e5db7. No native module qualified. Extract and adapt the existing implementation; preserve original licensing, attribution and provenance. New project-authored code uses GPL-3.0-or-later. No source transferred by this documentation commit.
-
-## Qualification plan
-
-1. Enumerate supported on-disk variants, validate geometry and features; implement bounded CORE probe.
-2. Provide CORE mount/stat/list/read and VOLUME query using native explicit diskdefs profiles, sector skew, directory extents, allocation blocks, user areas and filename attributes.
-3. Test multiple independent CP/M disk profiles, extent chains, duplicate allocations and ambiguous geometry; compare independent payloads and unchanged-image hashes; inject malformed media and I/O faults.
-4. Implement mutation, format, check/repair and DEFRAG map/plan/execute/verify/recover only with proven allocation, durability and interruption/recovery semantics. Unsupported operations must refuse before writing.
-5. Qualify exact packaged Common V2 ABI, hosted and import-free freestanding profiles, then actual BOOT and kernel integration independently.
-
-All independent stages, PDF manual and packaging are pending. No runtime capability is claimed.
-
-The [design and qualification reference](docs/CPM.pdf) is available. It is not an operational manual; release and installation qualification remain pending.
+Native directory/extent validation, namespace, fragmented payload reads and allocation accounting are implemented. Exact-revision CI must establish their correctness on independent populated media and constructed corrupt fixtures. Other diskdefs, ambiguous unmarked media, skewed/container geometry, password semantics, sparse records, mutation, format, recovery, defragmentation and physical BOOT/kernel qualification remain outstanding. The current published release installs only the reference PDF.

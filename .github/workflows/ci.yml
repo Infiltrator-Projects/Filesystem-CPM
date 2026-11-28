@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: CPM Common V2 offline reader qualification
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  read-only:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Infiltrator-Projects/Libraries
+          ref: 225e640ebed5351b1481bfbeef1a6144ca5146e7
+          path: Libraries
+          persist-credentials: false
+      - name: Native Common V2 hosted and import-free tests
+        run: |
+          test "$(git hash-object Libraries/include/infiltratr/filesystem_module_v2.h)" = 90730b68a53ecf6a6e304c789501f29c17c728c7
+          make check
+      - name: Independent cpmtools payload oracle (not a runtime backend)
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends cpmtools
+          mkfs.cpm -f pcw build/foreign.img
+          truncate -s 184320 build/foreign.img
+          dd if=/dev/urandom of=build/proof.bin bs=1 count=17003 status=none
+          printf yes > build/note.txt
+          cpmcp -f pcw build/foreign.img build/proof.bin 0:proof.bin
+          cpmcp -f pcw build/foreign.img build/note.txt 3:note.txt
+          cpmcp -f pcw build/foreign.img 0:proof.bin build/oracle.bin
+          cmp build/proof.bin build/oracle.bin
+          # Add the documented explicit JCE boot-spec markers in reserved
+          # boot sectors; cpmtools creates the actual directory and file data.
+          printf '\353' | dd of=build/foreign.img bs=1 seek=0 conv=notrunc status=none
+          printf 'CP/M' | dd of=build/foreign.img bs=1 seek=43 conv=notrunc status=none
+          printf 'DSK' | dd of=build/foreign.img bs=1 seek=51 conv=notrunc status=none
+          printf 'CP/M' | dd of=build/foreign.img bs=1 seek=124 conv=notrunc status=none
+          printf '\000\000\050\011\002\001\003\002' | dd of=build/foreign.img bs=1 seek=128 conv=notrunc status=none
+          sha256sum build/foreign.img > build/before
+          build/test_cpm ./build/CPM.so build/foreign.img build/proof.bin
+          build/test_cpm ./build/freestanding/CPM.so build/foreign.img build/proof.bin
+          sha256sum -c build/before
+      - name: Sanitizer qualification
+        run: |
+          make clean
+          make CFLAGS="-O1 -g -fsanitize=address,undefined -fno-omit-frame-pointer" check
